@@ -3,6 +3,11 @@ project(FoundationTimer)
 
 add_definitions("-std=c++11")
 
+message("MY_VARIABLE=${MY_VARIABLE}")
+if( MY_VARIABLE ) 
+    message("MY_VARIABLE evaluates to True")
+endif()
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
