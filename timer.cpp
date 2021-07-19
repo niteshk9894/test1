@@ -25,7 +25,6 @@ public:
 
     void onTimer(Timer& timer)
     {
-	std::cout<<"Reached here 1";
         std::cout << "Callback called after " << _sw.elapsed()/1000 << " milliseconds." << std::endl;
     }
 
@@ -35,7 +34,6 @@ private:
 
 int main(int argc, char** argv)
 {
-    std::cout<<"Entered main";
     TimerExample example;
     Timer timer(250, 500);
     timer.start(TimerCallback<TimerExample>(example, &TimerExample::onTimer));
